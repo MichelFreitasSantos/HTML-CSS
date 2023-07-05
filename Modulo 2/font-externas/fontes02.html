@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'GotikaOrnament';
+            src: url('./fonts/GotikaOrnament.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+
+            /* 
+                Tipos de format()
+                - opentype(otf)
+                - truetype(ttf)
+                - embedded-opentype
+                - truetype-aat (Apple Advanced Typography)
+                - svg
+            */
+        }
+
+        @font-face {
+            font-family: 'Halloween';
+            src: url('./fonts/HalloweenMorning.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'GotikaOrnament';
+            font-weight: normal;
+        }
+
+        h2 {
+            font-family: 'Halloween';
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptas laborum cumque quae soluta nisi sunt atque fugit incidunt neque minima hic quidem, error deleniti accusantium veniam adipisci alias labore.</p>
+    <h2>Subtítulo</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptas laborum cumque quae soluta nisi sunt atque fugit incidunt neque minima hic quidem, error deleniti accusantium veniam adipisci alias labore.</p>
+</body>
+</html>
