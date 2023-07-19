@@ -8,20 +8,59 @@
         * {
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        .btns {
+            margin-top: 20px;
+            display: flex;
+            gap: 5px;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Meu primeiro formulário</h1>
+    <h1>Tipos de Inputs</h1>
     <form action="" method="post">
         <div>
-            <label for="inome">Nome: </label>
-            <input type="text" name="nome" id="inome" required>
+            <label for="inome">Tipo text</label>
+            <input type="text" name="nome" id="inome" minlength="6" maxlength="15">
         </div>
+
         <div>
-            <label for="isobrenome">Sobrenome: </label>
-            <input type="text" name="sobrenome" id="isobrenome" required>
+            <label for="ipass">Tipo password</label>
+            <input type="password" name="pass" id="ipass" placeholder="********" required>
         </div>
-        <input type="submit" value="Enviar">
+
+        <div>
+            <label for="inumber">Tipo number</label>
+            <input type="number" name="number" id="inumber" step="0.1" min="0" max="10">
+        </div>
+
+        <div>
+            <label for="imes">Tipo month</label>
+            <input type="month" name="mes" id="imes">
+        </div>
+
+        <div>
+            <label for="idia">Tipo date</label>
+            <input type="date" name="dia" id="idia">
+        </div>
+
+        <div>
+            <label for="ihora">Tipo time</label>
+            <input type="time" name="hora" id="ihora">
+        </div>
+
+
+        <div class="btns">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
     </form>
 </body>
 </html>
