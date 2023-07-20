@@ -9,6 +9,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        div {
+            padding-bottom: 10px;
+            border-bottom: 2px solid grey;
+        }
+
+        fieldset {
+            margin-top: 10px;
+        }
+
         label {
             display: block;
             margin-top: 20px;
@@ -21,20 +30,28 @@
             gap: 5px;
         }
 
+        .inline {
+            display: inline;
+        }
+
     </style>
 </head>
 <body>
     <h1>Tipos de Inputs</h1>
-    <form action="" method="post">
-        <div>
-            <label for="inome">Tipo text</label>
-            <input type="text" name="nome" id="inome" minlength="6" maxlength="15">
-        </div>
-
-        <div>
-            <label for="ipass">Tipo password</label>
-            <input type="password" name="pass" id="ipass" placeholder="********" required>
-        </div>
+    <form autocomplete="on">
+        <fieldset>
+            <legend>Tipo de agrupamento fieldset</legend>
+            <div>
+                <label for="inome">Tipo text</label>
+                <input type="text" name="nome" id="inome" minlength="6" maxlength="15">
+            </div>
+    
+            <div>
+                <label for="ipass">Tipo password</label>
+                <input type="password" name="pass" id="ipass" placeholder="********" required>
+            </div>
+        </fieldset>
+       
 
         <div>
             <label for="inumber">Tipo number</label>
@@ -54,6 +71,90 @@
         <div>
             <label for="ihora">Tipo time</label>
             <input type="time" name="hora" id="ihora">
+        </div>
+        
+        <div>
+            <label for="itelefone">Tipo tel</label>
+            <input type="tel" name="telefone" id="itelefone">
+        </div> 
+        <!-- Estudar sobre RegEx -->
+        <!-- pattern="^\(\d{2}\)\d{4,5}-\d{4}$" -->
+        
+        <div>
+            <label for="iemail">Tipo email</label>
+            <input type="email" name="email" id="iemail" autocomplete="email">
+        </div>
+        
+        <fieldset>
+            <legend>Tipo  checkbox</legend>
+            <div>
+                <input type="checkbox" name="fute" id="ifute">
+                <label for="ifute" class="inline">Futebol</label><br>
+                <input type="checkbox" name="basq" id="ibasq">
+                <label for="ibasq" class="inline">Baquete</label><br>
+                <input type="checkbox" name="volei" id="ivolei">
+                <label for="ivolei" class="inline">Volei</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tipo radio</legend>
+            <div> <!-- propriedade name precisa ser igual -->
+                <input type="radio" name="sexo" id="sxmas" value="M">
+                <label for="sxmas" class="inline">Masculino</label><br>
+                <input type="radio" name="sexo" id="sxfem" value="F">
+                <label for="sxfem" class="inline">Feminino</label>
+            </div>
+        </fieldset>
+        
+        <div>
+            <label for="idata-hora">Tipo datetime</label>
+            <input type="datetime" name="data-hora" id="idata-hora">
+        </div>
+        
+        <div>
+            <label for="isemana">Tipo week</label>
+            <input type="week" name="semana" id="isemana">
+        </div>
+        
+        <div>
+            <label for="idatetime-local">Tipo datetime-local</label>
+            <input type="datetime-local" name="datetime-local" id="idatetime-local">
+        </div>
+        
+        <div>
+            <label for="iurl">Tipo url</label>
+            <input type="url" name="url" id="iurl">
+        </div>
+
+        <div>
+            <label for="ipesquisa">Tipo search</label>
+            <input type="search" name="pesquisa" id="ipesquisa">
+        </div>
+
+        <div>
+            <label for="irange">Tipo range</label>
+            <input type="range" name="range" id="irange">
+        </div>
+        
+        <div>
+            <label for="iimagem">Tipo image</label>
+            <input type="image" name="imagem" id="iimagem">
+        </div>
+
+        <div>
+            <label for="iarquivo">Tipo file</label>
+            <input type="file" name="arquivo" id="iarquivo">
+        </div>
+
+        <div>
+            <label for="icor">Tipo color</label>
+            <input type="color" name="cor" id="icor">
+        </div>
+
+        <div>
+            <label for="ihidden">Tipo hidden</label>
+            <input type="hidden" name="hidden" id="ihidden">
         </div>
 
 
